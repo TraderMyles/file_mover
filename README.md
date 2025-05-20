@@ -1,7 +1,3 @@
-Sure! Here's a clean, image-free, text-only version of the README:
-
----
-
 ## File Mover Script
 
 A simple Python script that moves files from one directory to another, including all files inside nested subdirectories. Useful for organizing scattered files into a single location.
