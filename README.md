@@ -1,70 +1,50 @@
-# file_mover
-Simple Python script for moving files between directories
+Sure! Here's a clean, image-free, text-only version of the README:
 
-🗂️ File Mover Script
+---
+
+## File Mover Script
+
 A simple Python script that moves files from one directory to another, including all files inside nested subdirectories. Useful for organizing scattered files into a single location.
 
-🚀 Features
-Prompts the user for the source and destination directory paths
+### Features
 
-Walks through all subfolders in the source directory
+* Prompts the user for the source and destination directory paths
+* Walks through all subfolders in the source directory
+* Moves all files (ignoring folder structure) into the destination directory
+* Prevents accidental moves by requiring user confirmation
 
-Moves all files (ignoring folder structure) into the destination directory
+### How It Works
 
-Prevents accidental moves by requiring user confirmation
+The script uses `os.walk()` to recursively loop through all subdirectories of the source folder. It then moves each file to the specified destination using `shutil.move()`.
 
-📁 How It Works
-This script uses os.walk() to recursively loop through all subdirectories of the source folder. It then moves each file to the specified destination using shutil.move().
+**Note:** Folder structure is not preserved — all files are moved flat into the destination.
 
-Note: Folder structure is not preserved — all files are moved flat into the destination.
+### Requirements
 
-🛠️ Requirements
-Python 3.x
+* Python 3.x
 
-🧑‍💻 Usage
+### Usage
+
 Run the script:
 
-bash
-Copy
-Edit
+```bash
 python file_mover.py
-Enter the full path to:
+```
 
-The source directory
+You will be prompted to enter the full path to:
 
-The destination directory
+* The source directory
+* The destination directory
 
 Confirm the paths when prompted.
-
 The script will recursively move all files.
 
-📝 Example
-If your source_dir contains:
+### Notes
 
-css
-Copy
-Edit
-source_dir/
-├── a.txt
-├── sub1/
-│   └── b.txt
-└── sub2/
-    └── c.txt
-And your destination_dir is empty, after running the script:
+* Files with the same name will overwrite each other in the destination folder.
+* This script does not copy — it removes files from the source.
+* Run it only after backing up important data.
 
-css
-Copy
-Edit
-destination_dir/
-├── a.txt
-├── b.txt
-└── c.txt
-⚠️ Notes
-Files with the same name will overwrite each other in the destination folder.
+### Contributions
 
-This script does not copy — it removes files from the source.
-
-Run it only after backing up important data.
-
-📬 Contributions
-Feel free to open issues or fork the repo to improve the script!
+Feel free to open issues or fork the repo to improve the script.
